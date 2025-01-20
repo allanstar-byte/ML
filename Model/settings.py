@@ -25,7 +25,13 @@ SECRET_KEY = 'django-insecure-(vi#0q@3d+adi2=j=pjl%7ilen4roz2oo_r$087c(m$d6_70t3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    
+    'Model.herokuapp.com',
+    'localhost',
+    '127.0.0.1',
+    'modelapp.herokuapp.com',
+]
 
 
 # Application definition
@@ -49,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Model.urls'

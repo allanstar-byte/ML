@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Prediction</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px;">
+    <h1 style="text-align: center; color: #333;">Predictive Model Input</h1>
+    <form method="POST" style="max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        {% csrf_token %}
+        <div style="margin-bottom: 15px;">
+            <label for="designation" style="display: block; margin-bottom: 5px;">Designation:</label>
+            <input type="text" id="designation" name="designation" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="resource_allocation" style="display: block; margin-bottom: 5px;">Resource Allocation:</label>
+            <input type="text" id="resource_allocation" name="resource_allocation" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="mental_fatigue_score" style="display: block; margin-bottom: 5px;">Mental Fatigue Score:</label>
+            <input type="text" id="mental_fatigue_score" name="mental_fatigue_score" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="burn_rate" style="display: block; margin-bottom: 5px;">Burn Rate:</label>
+            <input type="text" id="burn_rate" name="burn_rate" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="tenure" style="display: block; margin-bottom: 5px;">Tenure (Years):</label>
+            <input type="text" id="tenure" name="tenure" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="gender_encoded" style="display: block; margin-bottom: 5px;">Gender Encoded (0 or 1):</label>
+            <input type="text" id="gender_encoded" name="gender_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="company_type_encoded" style="display: block; margin-bottom: 5px;">Company Type Encoded (0 or 1):</label>
+            <input type="text" id="company_type_encoded" name="company_type_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="wfh_setup_available_encoded" style="display: block; margin-bottom: 5px;">WFH Setup Available Encoded (0 or 1):</label>
+            <input type="text" id="wfh_setup_available_encoded" name="wfh_setup_available_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        <button type="submit" style="width: 100%; padding: 10px; background: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer;">Predict</button>
+    </form>
+</body>
+</html>
