@@ -5,7 +5,14 @@ import joblib
 from django.shortcuts import render
 
 # Load the model
-model = joblib.load(r"C:\Users\Allan\Desktop\Jack\model.pkl")
+
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+model_path = os.path.join(BASE_DIR, 'pkl', 'model.pkl')  # Adjust the path as necessary
+model = joblib.load(model_path)
+
+#model = joblib.load(r"C:\Users\Allan\Desktop\Jack\model.pkl")
 
 def predict(request):
     if request.method == 'POST':
