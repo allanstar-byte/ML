@@ -65,14 +65,17 @@
         {% csrf_token %}
         <div style="margin-bottom: 15px;">
             <label for="designation" style="display: block; margin-bottom: 5px;">Designation:</label>
+            <option value="" disabled selected>Select a Job Group between 0 to 5</option>
             <input type="text" id="designation" name="designation" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
         <div style="margin-bottom: 15px;">
             <label for="resource_allocation" style="display: block; margin-bottom: 5px;">Resource Allocation:</label>
+            <option value="" disabled selected>Select a Value between 1 to 10 </option>
             <input type="text" id="resource_allocation" name="resource_allocation" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
         <div style="margin-bottom: 15px;">
             <label for="mental_fatigue_score" style="display: block; margin-bottom: 5px;">Mental Fatigue Score:</label>
+            <option value="" disabled selected>Select a Value between 0 to 1</option>
             <input type="text" id="mental_fatigue_score" name="mental_fatigue_score" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
         
