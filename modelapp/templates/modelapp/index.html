@@ -21,24 +21,24 @@
             <label for="mental_fatigue_score" style="display: block; margin-bottom: 5px;">Mental Fatigue Score:</label>
             <input type="text" id="mental_fatigue_score" name="mental_fatigue_score" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
-        <div style="margin-bottom: 15px;">
+        {% comment %} <div style="margin-bottom: 15px;">
             <label for="burn_rate" style="display: block; margin-bottom: 5px;">Burn Rate:</label>
             <input type="text" id="burn_rate" name="burn_rate" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-        </div>
+        </div> {% endcomment %}
         <div style="margin-bottom: 15px;">
             <label for="tenure" style="display: block; margin-bottom: 5px;">Tenure (Years):</label>
             <input type="text" id="tenure" name="tenure" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
         <div style="margin-bottom: 15px;">
-            <label for="gender_encoded" style="display: block; margin-bottom: 5px;">Gender Encoded (0 or 1):</label>
+            <label for="gender_encoded" style="display: block; margin-bottom: 5px;">Gender (Female = 0 or Male = 1):</label>
             <input type="text" id="gender_encoded" name="gender_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
         <div style="margin-bottom: 15px;">
-            <label for="company_type_encoded" style="display: block; margin-bottom: 5px;">Company Type Encoded (0 or 1):</label>
+            <label for="company_type_encoded" style="display: block; margin-bottom: 5px;">Company Type (Service = 0 or Product = 1):</label>
             <input type="text" id="company_type_encoded" name="company_type_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
         <div style="margin-bottom: 15px;">
-            <label for="wfh_setup_available_encoded" style="display: block; margin-bottom: 5px;">WFH Setup Available Encoded (0 or 1):</label>
+            <label for="wfh_setup_available_encoded" style="display: block; margin-bottom: 5px;">WFH Setup Available Encoded (No = 0 or Yes = 1):</label>
             <input type="text" id="wfh_setup_available_encoded" name="wfh_setup_available_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
         <button type="submit" style="width: 100%; padding: 10px; background: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer;">Predict</button>
