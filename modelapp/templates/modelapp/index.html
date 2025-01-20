@@ -21,25 +21,31 @@
             <label for="mental_fatigue_score" style="display: block; margin-bottom: 5px;">Mental Fatigue Score:</label>
             <input type="text" id="mental_fatigue_score" name="mental_fatigue_score" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
-        {% comment %} <div style="margin-bottom: 15px;">
-            <label for="burn_rate" style="display: block; margin-bottom: 5px;">Burn Rate:</label>
-            <input type="text" id="burn_rate" name="burn_rate" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-        </div> {% endcomment %}
+        
         <div style="margin-bottom: 15px;">
             <label for="tenure" style="display: block; margin-bottom: 5px;">Tenure (Years):</label>
             <input type="text" id="tenure" name="tenure" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
         </div>
         <div style="margin-bottom: 15px;">
-            <label for="gender_encoded" style="display: block; margin-bottom: 5px;">Gender <br> (Female = 0 or Male = 1):</label>
-            <input type="text" id="gender_encoded" name="gender_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <label for="gender_encoded" style="display: block; margin-bottom: 5px;">Gender:</label>
+            <select id="gender_encoded" name="gender_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
         </div>
         <div style="margin-bottom: 15px;">
-            <label for="company_type_encoded" style="display: block; margin-bottom: 5px;">Company Type <br> (Service = 0 or Product = 1):</label>
-            <input type="text" id="company_type_encoded" name="company_type_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <label for="company_type_encoded" style="display: block; margin-bottom: 5px;">Company Type:</label>
+            <select id="company_type_encoded" name="company_type_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <option value="0">Service</option>
+                <option value="1">Product</option>
+            </select>
         </div>
         <div style="margin-bottom: 15px;">
-            <label for="wfh_setup_available_encoded" style="display: block; margin-bottom: 5px;">WFH (Work From Home) Setup Available <br> (No = 0 or Yes = 1):</label>
-            <input type="text" id="wfh_setup_available_encoded" name="wfh_setup_available_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <label for="wfh_setup_available_encoded" style="display: block; margin-bottom: 5px;">WFH Setup Available:</label>
+            <select id="wfh_setup_available_encoded" name="wfh_setup_available_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
         </div>
         <button type="submit" style="width: 100%; padding: 10px; background: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer;">Predict</button>
     </form>
