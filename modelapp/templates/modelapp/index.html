@@ -4,10 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burn Rate Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            color: #666;
+        }
+        select option {
+            color: #333;
+        }
+        select option[disabled] {
+            color: #999;
+            font-style: italic;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px;">
-    <h1 style="text-align: center; color: #333;">Burn Rate Prediction Model</h1>
-    <form method="POST" style="max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+<body>
+    <h1>Burn Rate Prediction Model</h1>
+    <form method="POST">
         {% csrf_token %}
         <div style="margin-bottom: 15px;">
             <label for="designation" style="display: block; margin-bottom: 5px;">Designation:</label>
@@ -28,28 +82,31 @@
         </div>
         <div style="margin-bottom: 15px;">
             <label for="gender_encoded" style="display: block; margin-bottom: 5px;">Gender:</label>
-            <select id="gender_encoded" name="gender_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <select id="gender_encoded" name="gender_encoded" required>
+                <option value="" disabled selected>Select a Value</option>
                 <option value="0">Female</option>
                 <option value="1">Male</option>
             </select>
         </div>
         <div style="margin-bottom: 15px;">
             <label for="company_type_encoded" style="display: block; margin-bottom: 5px;">Company Type:</label>
-            <select id="company_type_encoded" name="company_type_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <select id="company_type_encoded" name="company_type_encoded" required>
+                <option value="" disabled selected>Select a Value</option>
                 <option value="0">Service</option>
                 <option value="1">Product</option>
             </select>
         </div>
         <div style="margin-bottom: 15px;">
             <label for="wfh_setup_available_encoded" style="display: block; margin-bottom: 5px;">WFH Setup Available:</label>
-            <select id="wfh_setup_available_encoded" name="wfh_setup_available_encoded" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+            <select id="wfh_setup_available_encoded" name="wfh_setup_available_encoded" required>
+                <option value="" disabled selected>Select a Value</option>
                 <option value="0">No</option>
                 <option value="1">Yes</option>
             </select>
         </div>
-        <button type="submit" style="width: 100%; padding: 10px; background: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer;">Predict</button>
+        <button type="submit">Predict</button>
     </form>
-    <footer style="text-align: center; margin-top: 20px; color: #777;">
+    <footer>
         <p>&copy; 2025 Jackson Mulera. All rights reserved.</p>
     </footer>
 </body>
